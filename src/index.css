@@ -1,0 +1,65 @@
+@import './assets/css/style';
+
+.btn {
+    display: flex;
+    flex: 0 0 auto;  
+    align-items: flex-end;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    /* color: var(--text-grey); */
+    color: var(--text-grey-contrast);
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.btn::after {
+    content: '';
+    display: block;
+    /* background-image: url(../../../assets/img/arrow-right.svg); */
+    background-image: url(/src/assets/img/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 70%;
+    width: 31px;
+    height: 31px;
+    border-radius: 31px;
+    background-color: var(--background-dark-blue);
+    border: 1px solid var(--background-dark-blue);
+    position: absolute;
+    will-change: auto;
+    transition: all .3s ease 0s; 
+    left: -40px;
+    bottom: -8px;
+} 
+
+.btn::before {
+    content: '';
+    width: 31px;
+    height: 31px;
+    border-radius: 31px;
+    background-color: var(--background-dark-blue);
+    border: 1px solid var(--background-dark-blue);
+    left: -40px;
+    bottom: -8px;
+    position: absolute;
+    will-change: auto;
+    transition: all .3s ease 0s;
+} 
+
+@media (any-hover: hover) {
+    .btn:hover::before {
+        width: 150%;
+        height: 31px;
+        z-index: -1;
+        transition: all .3s ease 0s;
+    }     
+    .btn:hover {
+        color: var(--text-white);
+    } 
+}

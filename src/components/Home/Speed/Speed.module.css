@@ -1,0 +1,127 @@
+.speed {
+    --left: min(389px, max(var(--vw)* 389, 24px));
+    --right: min(326px, max(var(--vw)* 329, 24px));
+    margin-top: min(56px, max(var(--vw)* 56, 24px));
+    margin-right: var(--right);
+    margin-bottom: min(78px, max(var(--vw)* 78, 24px));
+    margin-left: var(--left);
+    height: min(530px, max(var(--vw)* 530, 424px));
+    background-image: url(../../../assets/img/ts.svg);
+    background-repeat: no-repeat;
+    background-position: 113% 0%;
+    background-size: contain;
+    position: relative;
+    padding-top: 34px;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: calc(1920px - var(--left)* 0.5 - var(--right) * 0.5);
+    width: 100%;
+}
+.title {
+    margin-left: 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 77px;
+    position: relative;
+}
+.item {
+    width: 296px;
+    width: 318px;
+}
+
+.time {
+    font-weight: 400;
+    font-size: min(100px, max(var(--vw)* 100, 44px));
+    line-height: 112%;
+    letter-spacing: 0.05em;
+    color: var(--text-blue);
+    border-bottom: 2px solid var(--text);
+}
+
+.timetext {
+    font-weight: 700;
+    font-size: min(36px, max(var(--vw)* 36, 24px));
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-blue);
+}
+.text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    padding-top: 10px;
+}
+.subtitle {
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    font-size: min(120px, max(var(--vw)* 120, 25px));
+    line-height: 100%;
+    letter-spacing: 0em;
+    color: var(--text-back);
+}
+.btn {
+    position: absolute;
+    bottom: 53px;
+    right: 12px;
+    padding: 19px min(46px, max(var(--vw)* 46, 30px));
+}
+
+@media (max-width: 1024px) {
+    .speed {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto min(78px, max(var(--vw)* 78, 40px));
+        margin-left: var(--container-padding-x);
+        margin-right: var(--container-padding-x);
+        background-position: 50% 50%;
+        position: relative;
+        padding-top: 34px;
+        height: auto;
+    }
+    .container {
+        padding-bottom: 5vw;
+        padding-top: 5vw;
+        z-index: 10;
+    }
+    .btn {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+        font-size: 12px;
+        padding:  16px 20px;
+        letter-spacing: 0.3em;
+    }
+}
+
+@media (max-width: 412px) {
+    .speed {
+        margin-left: 6.5vw;
+        margin-right: 6.5vw;
+    }
+}
+@media (max-width: 200px) {
+    .btn {
+        padding:  max(2vw, 5px) max(10vw, 26px);
+    }
+    .time {
+        font-size: 34px;
+    }
+    .text {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        padding-top: 10px;
+    }
+}
+

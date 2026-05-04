@@ -1,0 +1,88 @@
+.bLock {
+    /* padding-top: 135px; */
+    padding-top: min(128px, max(var(--vw) * 128, 60px));
+    padding-left: min(315px, max(var(--vw) * 315, 60px));
+    padding-left: 315px;
+}
+
+.title  {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: .2em;
+    padding-left: 73px;
+}
+.carousels {
+    display: block;
+    margin-top: 90px;
+    /* margin-bottom: 60px; */
+}
+.inner {
+    display: block;
+    position: relative;
+}
+.inner::before {
+    content: "";
+    position: absolute;
+    /* width: 159px; */
+    width: min(159px, max(var(--vw)* 159, 40px));
+    height: 100%;
+    right: 0px;
+    top: 0;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7) 50%, rgb(255, 255, 255) 90%);
+}
+
+.slides {
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+    padding-bottom: 31px;
+}
+.item {
+    display: flex;
+    gap: 30px;
+}
+.item:last-child {
+    margin-right: 210px;
+    margin-right: min(210px, max(var(--vw) * 210, 110px));
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 190px;
+    padding-top: 47px;
+}
+.btn {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .bLock {
+        padding-left: 5vw;
+    }
+    .title  {
+        font-size: max(6vw, 14px);
+        padding-left: 0;
+    }
+    .carousels {
+        margin-top: 90px;
+        margin-top: max(10vw, 24px);
+        margin-bottom: max(10vw, 24px);
+    }
+}

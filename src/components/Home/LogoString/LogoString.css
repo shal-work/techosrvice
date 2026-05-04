@@ -1,0 +1,33 @@
+
+.logoString {
+    height: 150px;
+    width: max-content;
+    position: relative;
+    animation: moveSlideshow 30s linear infinite;
+}
+
+.logoString:hover {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* The user prefers reduced motion */
+  .logoString1 {
+    /* Turn off the animation for the header element */
+    animation: none;
+  }
+  .logoString2 {
+    /* Turn off the animation for the header element */
+    animation: none;
+  }
+}
+
+
+@keyframes moveSlideshow {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

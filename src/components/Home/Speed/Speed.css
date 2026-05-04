@@ -1,0 +1,23 @@
+.button {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: .5em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--background-dark);
+    /* color: var(--text-blue); */
+    color: var(--text-blue-contrast);
+    border-radius: 36px;
+    cursor: pointer;
+    border-color: var(--background-dark);
+    border: 2px solid var(--background-dark);
+}
+
+.button:hover {
+    background-color: var(--background-dark-blue);
+    border: 2px solid var(--background-dark-blue);
+    color: var(--text-back);
+    will-change: auto;
+    transition: 0.01s ease-out;
+}

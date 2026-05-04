@@ -1,0 +1,68 @@
+
+.string {
+    /* margin: 129px auto 0 auto; */
+    margin: min(129px, max(var(--vw)* 129, 24px)) auto 0 auto;
+}
+.logoBlock {
+    display: flex;
+    mask-image: linear-gradient(
+        var(--mask-direction, to right),
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 1) 20%,
+        hsl(0 0% 0% / 1) 80%,
+        hsl(0 0% 0% / 0)
+    );
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0.2em;
+    margin-left: 389px;
+    margin-left: min(389px, max(var(--vw)* 389, 24px));
+}
+
+.logoString {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    column-gap: min(80px, max(var(--vw)* 80, 34px));
+}
+
+
+.logoImg {
+    /* margin-right: min(80px, max(var(--vw)* 80, 34px)); */
+}
+
+.powerMachines {
+    max-width: 82px;
+    width: 100%;
+}
+.kartex {
+   max-width: 128px;
+   width: 100%; 
+}
+
+.logoImg:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+    .title {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .title {
+        font-weight: 700;
+        /* font-size: 26px; */
+        font-size: max(6vw, 14px);
+        line-height: 100%;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+}

@@ -1,0 +1,4 @@
+
+.tabBtnActive {
+    border-bottom: 2px solid var(--text-white);
+}

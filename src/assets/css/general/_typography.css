@@ -1,0 +1,25 @@
+
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "Roboto Slab", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@font-face { 
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: local("Proxima Nova Regular"),
+    local("Proxima-Nova-Regular"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+    src: local("Proxima Nova Bold"),
+    local("Proxima-Nova-Bold"), url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+    font-weight: bold;
+}

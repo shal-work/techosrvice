@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+body {
+    margin: 0;
+}
+:root {
+    --index: calc(1vw + 1vh);
+    --vw: calc(100vw/1920);
+    --container-padding-x: min(315px, max(var(--vw)* 315, 24px));
+    --container-width: min(1920px, max(var(--vw)* 1920, 24px));
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+* {
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;  /* letter-spacing: -0.04em; // ===-4% */
+    color: var(--text);
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+/* прячем прокрутку */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+    background: transparent;
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #646c8638;
+    border: 1px solid #858fb138;
+    border-radius: 10px;
+}
+
+.reset {
+    margin: 0; 
+    padding: 0;
+}
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin: 0 auto;
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+    width: 100%;
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        padding-left: 6.5vw;
+        padding-right: 6.5vw;
+    }
+}
+
+/* прижать подвал / footer к низу, .conteiner { min-height: 100vh; display: flex; flex-direction: column;); */
+.footer {
+    margin-top: auto;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+}
+

@@ -1,0 +1,25 @@
+/* Colors */
+:root {
+    --background: #FFFFFF;
+    --background-black: #000000;
+    --background-grey: #E7E9ED;
+    --background-dark: #111926;    
+    --background-dark-blue: #263349;
+    --background-dark-orange: #f47819;
+    --background-blue-gray: #F1F5FA;
+    --background-cornflower: #B0C8E8;
+    --text: #111926;    
+    --text-blue: #1A6AFF;
+    --text-blue-contrast: #3D80FF;
+    --text-blue-contrast-context: #0F62FF;
+    --text-grey: #5B7494;
+    --text-grey-contrast: #6A84A4;
+
+    --text-white: #FFFFFF;
+    --text-marker: #FB7A19;
+    --text-time: #E7F1FF;
+    --scrollbar: #acacd9;
+    --text-back: #F1F5FA;
+    --underline: #364866;
+    --placeholder:  #111926A8;
+}

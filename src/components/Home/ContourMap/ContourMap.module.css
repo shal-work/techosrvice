@@ -1,0 +1,238 @@
+.block {
+    background-image: url(../../../assets/img/wave_map.png);
+    height: 1324px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* outline: 1px solid red; */
+    position: relative;
+    top: -207px;
+}
+/* .content {
+    margin: 0 auto;
+    position: absolute;
+
+    top: 270px;
+    left: 53px;
+    width: 100%;
+    width: 1382px;
+    height: 1054px;
+    outline: 1px solid blue;
+} */
+.map {
+    background-image: url(../../../assets/img/map_1285_850.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+    width: 100%;
+    height: 850px;
+    top: 477px;
+    left: 59px;
+}
+
+.places {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1285px;
+    margin: 0 auto;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+.place {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.city {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+.kauhajoki {
+    top: 25px;
+    left: 98px;
+}
+.kaliningrad {
+    top: 94px;
+    left: 30px;
+}
+.spb {
+    top: 139px;
+    left: 179px;
+}
+.tver {
+    top: 209px;
+    left: 185px;
+}
+.vologda {
+    top: 207px;
+    left: 300px;
+}
+.msk {
+    top: 237px;
+    left: 204px
+}
+.kaluga {
+    top: 266px;
+    left: 212px
+}
+.nnovgorod {
+    top: 247px;
+    left: 336px;
+}
+.taganrog {
+    top: 313px;
+    left: 97px;
+}
+.temryuk {
+    top: 336px;
+    left: 39px;
+}
+.perm {
+    top: 309px;
+    left: 407px;
+}
+.сhelyabinsk {
+    top: 359px;
+    left: 383px;
+}
+.khantyMansiysk {
+    top: 305px;
+    left: 518px;
+}
+.belovo {
+    top: 475px;
+    left: 613px;
+}
+.nakhodka {
+    top: 639px;
+    left: 1108px;
+}
+.vladivostok {
+    top: 656px;
+    left: 1085px;
+}
+.ts {
+    background-image: url(../../../assets/img/ts_map.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    width: 247px;
+    height: 167px;
+    top: -108px;
+    left: 869px;
+}
+
+@media (max-width: 1285px) {
+    .map {
+        position: absolute;
+        width: 100%;
+        height: 50vw;
+        /* height: min(850px, max(var(--vw) * 850, 200px)); */
+        top: 477px;
+        left: 0;
+    }
+    .kauhajoki {
+        top: 1.66%;
+        left: 17%; 
+    }
+    .kaliningrad {
+        top: 10%;
+        left: 13.4%;
+    }
+    .spb {
+        top: 15%;
+        left: 22%;        
+    }
+    .tver {
+        top: 23%;
+        left: 22%;
+    }
+    .vologda {
+        top: 22.8%;
+        left: 28.5%;
+    }
+    .msk {
+        top: 26.5%;
+        left: 23%;
+    }
+    .kaluga {
+        top: 30.2%;
+        left: 23.5%;
+    }
+    .nnovgorod {
+        top: 27%;
+        left: 31%;
+    }
+    .taganrog {
+        top: 35%;
+        left: 17%;
+    }
+    .temryuk {
+        top: 37.5%;
+        left: 13.5%;
+    }
+    .perm {
+        top: 34.5%;
+        left: 34.8%;
+    }
+    .сhelyabinsk {
+        top: 40.5%;
+        left: 33.5%;
+    }
+    .khantyMansiysk {
+        top: 34%;
+        left: 41.5%;
+    }
+    .belovo {
+        top: 53%;
+        left: 46.5%;
+    }
+    .nakhodka {
+        top: 72%;
+        left: 77.5%;
+    }
+    .vladivostok {
+        top: 75%;
+        left: 76%;
+    }
+    .city {
+        font-size: 10px;
+    } 
+    .icon {
+        width: max(2vw, 10px);
+        height: max(2vw, 10px);
+    }   
+}
+
+@media (max-width: 1024px) {
+    .map {
+        position: absolute;
+        width: 100%;
+        height: 50vw;
+        top: min(477px, max(var(--vw) * 477, 20px));
+        left: 0;
+    }
+    .city {
+        display: none;
+    } 
+    .cityMain {
+        display: block;
+        z-index: 11;
+    }
+    .block {
+        background-image: url(../../../assets/img/wave_map.png);
+        height: 1324px;
+        height: max(100vw, 10px);
+        position: relative;
+        background-size: contain;
+        top: calc(-1 * min(207px, max(var(--vw)* 207, -30px)));
+    }
+}

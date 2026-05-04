@@ -1,0 +1,31 @@
+@import './general/gi.css';
+@import './helpers/text-transform';
+
+
+.content {
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.modal {
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+
+.fadeOut {
+    opacity: 0; 
+}
+
+.fadeIn {
+    opacity: 1; 
+}
