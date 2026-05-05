@@ -33,7 +33,7 @@ const Header = (props) => {
                     <Logo dispatch = {props.dispatch} isToggled = {props.state.statusMenu.activeMenu }/>
                     <div className={s.block}>
                         <Navbar dispatch = {props.dispatch} isToggled = {props.state.statusMenu.activeMenu }/>
-                        <Link  to="/news" className={s.language} >Ru</Link>
+                        <Link  to="/" className={s.language} >Ru</Link>
                     </div>
                 </div>
                 <div className={s.container}>
@@ -48,7 +48,7 @@ const Header = (props) => {
                         <p className={s.phone + " reset"}>+7&nbsp;(812)&nbsp;438-04-74</p>
                     </div>
 
-                    <Link  to="/news" className={s.language} aria-label="Выбрать язык">Ru</Link>
+                    <Link  to="/" className={s.language} aria-label="Выбрать язык">Ru</Link>
                         <button onClick={handleToggle} type="button" className = {s.burger  + ' reset'} aria-label={ariaLabel} aria-expanded={ariaExpanded}>
                         <span className={props.state.statusMenu.activeMenu ? `${s.fadeInopen + ' ' + s.iconbar }` : s.iconbar}> </span>
                     </button>
