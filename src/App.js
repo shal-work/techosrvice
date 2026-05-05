@@ -34,12 +34,12 @@ const App = (props) => {
                     <h1 className='visually-hidden'>ТехноСервис</h1>
                     <Suspense fallback={<Preloader/>}>
                         <Routes>
-                            <Route path="useLocation/" element = {<Home/>}/>
-                            <Route path='useLocation/about' element = {<About/>}/>
-                            <Route path='useLocation/services' element = {<PageServices/>}/>
-                            <Route path='useLocation/gallery' element = {<PageGallery/>}/>
-                            <Route path='useLocation/materials' element = {<PageMaterials/>}/>
-                            <Route path='useLocation/contacts' element = {<PageContacts/>}/>
+                            <Route path="//" element = {<Home/>}/>
+                            <Route path='/about' element = {<About/>}/>
+                            <Route path='/services' element = {<PageServices/>}/>
+                            <Route path='/gallery' element = {<PageGallery/>}/>
+                            <Route path='/materials' element = {<PageMaterials/>}/>
+                            <Route path='/contacts' element = {<PageContacts/>}/>
                             <Route path="*" element={<Home/>} />
                         </Routes>
                     </Suspense>

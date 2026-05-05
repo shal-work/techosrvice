@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../Home//Hero/Hero'
+// import Hero from '../Home//Hero/Hero'
 import LogoString from '../Home/LogoString/LogoString'
 import Speed from '../Home/Speed/Speed'
 import ServiceBlock from '../Home/ServiceBlock/ServiceBlock'
@@ -16,9 +16,6 @@ import s from './About.module.css';
 
 const About = () => {
     return 	<div className={s.about}>
-                <section className={s.container}>
-                  <Hero/>
-               </section>
                <LogoString/>
                <Speed/>
                <ServiceBlock/>

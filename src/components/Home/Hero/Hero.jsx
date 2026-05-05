@@ -66,6 +66,7 @@ const Hero = () => {
             let parallax = document.querySelector('.selector');
             parallax.setAttribute('style', `background-position: ${layer.X + 'px'} ${layer.Y + 'px'}`);
         }
+        e.preventDefault();
     }
     if (!editHasTouch) {
         return 	(

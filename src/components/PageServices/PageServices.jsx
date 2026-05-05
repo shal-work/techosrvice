@@ -1,6 +1,4 @@
 import React from 'react';
-import Hero from '../Home//Hero/Hero'
-import LogoString from '../Home/LogoString/LogoString'
 import Speed from '../Home/Speed/Speed'
 import ServiceBlock from '../Home/ServiceBlock/ServiceBlock'
 import ClosingNeeds from '../Home/ClosingNeeds/ClosingNeeds'
@@ -16,10 +14,6 @@ import s from './PageServices.module.css';
 
 const PageServices = () => {
     return 	<div className={s.block}>
-                <section className={s.container}>
-                  <Hero/>
-               </section>
-               <LogoString/>
                <Speed/>
                <ServiceBlock/>
                <ClosingNeeds/>

@@ -34,7 +34,6 @@ const WhoService = () => {
                             clearInterval(timerId); 
                         }
                     }, 10);               
-                    // e.preventDefault();
                 } 
             }
             else if (e.deltaY < 0) {
@@ -48,7 +47,6 @@ const WhoService = () => {
                             clearInterval(timerId); 
                         }
                     }, 10);               
-                    // e.preventDefault();
                 }
             }            
         }, { passive: true });
