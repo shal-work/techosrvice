@@ -14,16 +14,14 @@ console.log("%c  РОССИЯ  ", "background: blue; color: yellow; font-size: x
 
 
 const App = (props) => {
-    const [useLocation, setUseLocation] = useState(false); 
+    const [currentPath , setCurrentPath ] = useState(false); 
 
-        useEffect(() => {
-            setUseLocation(window.location.href);
-        }, []);
-
-    console.log('Current location is ', useLocation);
+    useEffect(() => {
+        // setUseLocation(window.location.href);
+        setCurrentPath(window.location.pathname);
+    }, []);
 
     return (
-
         <BrowserRouter>{
             <main className={s.main}>
                 <Header
@@ -34,12 +32,20 @@ const App = (props) => {
                     <h1 className='visually-hidden'>ТехноСервис</h1>
                     <Suspense fallback={<Preloader/>}>
                         <Routes>
-                            <Route path="useLocation" element = {<Home/>}/>
-                            <Route path='useLocation/about' element = {<About/>}/>
-                            <Route path='useLocation/services' element = {<PageServices/>}/>
-                            <Route path='useLocation/gallery' element = {<PageGallery/>}/>
-                            <Route path='useLocation/materials' element = {<PageMaterials/>}/>
-                            <Route path='useLocation/contacts' element = {<PageContacts/>}/>
+                            {/* <Route path='/' element = {<Home/>}/>
+                            <Route path='/about' element = {<About/>}/>
+                            <Route path='/services' element = {<PageServices/>}/>
+                            <Route path='/gallery' element = {<PageGallery/>}/>
+                            <Route path='/materials' element = {<PageMaterials/>}/>
+                            <Route path='/contacts' element = {<PageContacts/>}/>
+                            <Route path="*" element={<Home/>} /> */}
+
+                            <Route path={`${currentPath}`} element = {<Home/>}/>
+                            <Route path={`${currentPath}about`}  element = {<About/>}/>
+                            <Route path={`${currentPath}services`} element = {<PageServices/>}/>
+                            <Route path={`${currentPath}gallery`} element = {<PageGallery/>}/>
+                            <Route path={`${currentPath}materials`} element = {<PageMaterials/>}/>
+                            <Route path={`${currentPath}contacts`} element = {<PageContacts/>}/>
                             <Route path="*" element={<Home/>} />
                         </Routes>
                     </Suspense>
