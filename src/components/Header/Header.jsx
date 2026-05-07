@@ -2,14 +2,15 @@ import React, {useState} from 'react';
 import s from './Header.module.css';
 import Navbar from './Navbar/Navbar';
 import Logo from './Logo';
-import {Link} from "react-router-dom";
 import useWindowDimensions from '../../Hook/GetWindowDimensions';
-import {toggleMenuCreator} from '../../redus/reduser';
+import {toggleMenuCreator, toggleLangugeRu, toggleLangugeCh} from '../../redus/reduser';
 
 const Header = (props) => {
+
     const { width, height } = useWindowDimensions();
     const [ariaLabel, setariaLabel ] = useState("Открыть меню");
     const [ariaExpanded, setAriaExpanded ] = useState(false);
+    const [languge, setLanguge ] = useState(props.state.statusMenu.language);
 
     const handleToggle = () => {
         props.dispatch(toggleMenuCreator());
@@ -26,6 +27,16 @@ const Header = (props) => {
         }
     };
 
+    const handleToggleLanguge = () => {
+        if (props.state.statusMenu.isToggleLanguage ) {
+            props.dispatch(toggleLangugeCh());
+            setLanguge(props.state.statusMenu.language);
+        } else {
+            props.dispatch(toggleLangugeRu());
+            setLanguge(props.state.statusMenu.language);
+        }
+    }
+
 
     if(width > 768 || (width/height < 1 && width > 768) )  {
         return <header className={s.header}>
@@ -33,7 +44,7 @@ const Header = (props) => {
                     <Logo dispatch = {props.dispatch} isToggled = {props.state.statusMenu.activeMenu }/>
                     <div className={s.block}>
                         <Navbar dispatch = {props.dispatch} isToggled = {props.state.statusMenu.activeMenu }/>
-                        <Link  to="/" className={s.language} >Ru</Link>
+                        <button onClick={handleToggleLanguge} className={s.language + ' text-uppercase'} aria-label="Выбрать язык">{languge}</button>
                     </div>
                 </div>
                 <div className={s.container}>
@@ -48,8 +59,8 @@ const Header = (props) => {
                         <p className={s.phone + " reset"}>+7&nbsp;(812)&nbsp;438-04-74</p>
                     </div>
 
-                    <Link  to="/" className={s.language} aria-label="Выбрать язык">Ru</Link>
-                        <button onClick={handleToggle} type="button" className = {s.burger  + ' reset'} aria-label={ariaLabel} aria-expanded={ariaExpanded}>
+                    <button onClick={handleToggleLanguge} className={s.language + ' text-uppercase'} aria-label="Выбрать язык">{languge}</button>
+                    <button onClick={handleToggle} type="button" className = {s.burger  + ' reset'} aria-label={ariaLabel} aria-expanded={ariaExpanded}>
                         <span className={props.state.statusMenu.activeMenu ? `${s.fadeInopen + ' ' + s.iconbar }` : s.iconbar}> </span>
                     </button>
                 </div>

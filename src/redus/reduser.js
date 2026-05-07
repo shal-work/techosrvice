@@ -3,10 +3,14 @@
 
 const ACTIVE_MENU = 'ACTIVE_MENU';
 const TOGGLEE_MENU = 'TOGGLEE_MENU';
+const LANGUAGE_RU = 'LANGUAGE_RU';
+const LANGUAGE_CH = 'LANGUAGE_CH';
 
 
 let initialState = {
-    activeMenu: false
+    activeMenu: false,
+    language: 'ru',
+    isToggleLanguage: true,
 }
 
 
@@ -17,6 +21,14 @@ const menuReducer = (action, state = initialState) => {
         case TOGGLEE_MENU: 
                 state.activeMenu = state.activeMenu ? false : true;
             return state;
+        case LANGUAGE_RU: 
+                state.isToggleLanguage = true;
+                state.language = 'ru';
+            return state;
+        case LANGUAGE_CH: 
+                state.isToggleLanguage = false;
+                state.language = 'ch';
+            return state;
         default:
 
             return state;
@@ -25,5 +37,7 @@ const menuReducer = (action, state = initialState) => {
 
 export const initialActiveMenuCreator = () => ({ type: ACTIVE_MENU});
 export const toggleMenuCreator = () => ({ type: TOGGLEE_MENU});
+export const toggleLangugeRu = () => ({ type: LANGUAGE_RU});
+export const toggleLangugeCh = () => ({ type: LANGUAGE_CH});
 
 export default menuReducer;
