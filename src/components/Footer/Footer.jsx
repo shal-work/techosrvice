@@ -29,7 +29,8 @@ const init = () => {
     const point = new window.ymaps.Placemark([59.906964, 30.261691], {},{
                 iconLayout: 'default#image',
                 // iconImageHref: "assets/img/spriteIco.svg#location-y",  
-                iconImageHref: 'https://techno-service.su/img/icons/location-map.svg',
+                // iconImageHref: 'https://techno-service.su/img/icons/location-map.svg',
+                iconImageHref: 'https://shal-work.github.io/techosrvice/location-place.svg',
                 preset: 'islands#blueDotIcon',
                 iconImageSize: [78, 110],
                 iconImageOffset: [-30, -50]

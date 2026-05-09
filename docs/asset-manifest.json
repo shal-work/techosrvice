@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.710fe2ec.css",
-    "main.js": "./static/js/main.33bad9d5.js",
+    "main.css": "./static/css/main.ad815988.css",
+    "main.js": "./static/js/main.81dfca32.js",
     "static/media/warehouse_1920_1574.png": "./static/media/warehouse_1920_1574.0127d7e87968db26231b.png",
     "static/media/Union.png": "./static/media/Union.98c7c76672abf21ad48d.png",
     "static/media/platforms_1920_1574.png": "./static/media/platforms_1920_1574.9d9bbd58ea829bd7c7e9.png",
@@ -54,11 +54,11 @@
     "static/media/packaging.svg": "./static/media/packaging.c8dad0a8cfd211c71c96.svg",
     "index.html": "./index.html",
     "static/media/arrow-right.svg": "./static/media/arrow-right.fb15ffc9317e70d02d79.svg",
-    "main.710fe2ec.css.map": "./static/css/main.710fe2ec.css.map",
-    "main.33bad9d5.js.map": "./static/js/main.33bad9d5.js.map"
+    "main.ad815988.css.map": "./static/css/main.ad815988.css.map",
+    "main.81dfca32.js.map": "./static/js/main.81dfca32.js.map"
   },
   "entrypoints": [
-    "static/css/main.710fe2ec.css",
-    "static/js/main.33bad9d5.js"
+    "static/css/main.ad815988.css",
+    "static/js/main.81dfca32.js"
   ]
 }
